@@ -1,0 +1,244 @@
+.contacts {
+  margin-bottom: 39px;
+  padding-top: 48px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 63px;
+    margin-bottom: 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background-image: url("../../img/zigzag-line-desktop.svg");
+
+    @media (min-width: $tablet-width) {
+      height: 17px;
+      background: url("../../img/zigzag-line-desktop.svg") no-repeat;
+      background-size: 100%;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 117px 58px 290px 58px 1fr;
+    margin-left: 4.36%;
+    margin-right: 4.36%;
+    margin-bottom: 108px;
+    padding-top: 94px;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 112px 58px 1fr 58px;
+    row-gap: 34px;
+  }
+}
+
+.contacts__title {
+  @include title;
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    position: relative;
+    padding-top: 23px;
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 3px;
+      width: 47px;
+      height: 82px;
+      background: url("../../img/flag.svg") no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 79px;
+    padding-right: 67px;
+    text-align: right;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    &::after {
+      left: 57px;
+      top: 62px;
+    }
+  }
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  margin-bottom: 29px;
+
+  &--address {
+    margin-bottom: 62px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 3/-1;
+      grid-row: 3/4;
+      width: 93%;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  &--e-mail {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+  }
+}
+
+.contacts__definition,
+.contacts__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: $grey;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 91%;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.contacts__link {
+  font-style: normal;
+  font-size: 14px;
+  color: $grey;
+  text-decoration: none;
+  padding-bottom: 3px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: $light-aquamarine;
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      bottom: -7px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:hover::after {
+    background: #46c1ae;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.contacts__location {
+  position: relative;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 5/6;
+    grid-row: 1/5;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display: block;
+  outline: 1px solid transparent;
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+}
+
+.contacts__image {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  max-height: 454px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contacts__button {
+  @include link;
+  @include button;
+
+  @media (min-width: $tablet-width) {
+    width: 34.43%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

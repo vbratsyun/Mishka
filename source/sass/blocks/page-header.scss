@@ -1,0 +1,64 @@
+.page-header {
+  background-color: $white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    position: static;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.page-header__logo {
+  @include link;
+  text-align: center;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    order: 0;
+    padding: 21px 0 21px 50px;
+    min-width: 48.3%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    min-width: 22.9%;
+    padding: 8px 12px;
+  }
+
+  &:hover .page-header__logo-image {
+    opacity: 0.6;
+  }
+
+  &:focus .page-header__logo-image {
+    outline: 2px solid $focus;
+  }
+
+  &:active .page-header__logo-image {
+    opacity: 0.3;
+  }
+}
+
+.page-header__logo-image,
+.page-header__logo-image-index {
+  display: block;
+  margin: 22px auto;
+  outline: 1px solid transparent;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.page-header__logo-image-index {
+  cursor: auto;
+}

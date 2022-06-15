@@ -1,0 +1,202 @@
+.promo {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1.32fr 42px 116px 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 117px 58px 290px 58px 1fr;
+    margin-bottom: 56px;
+  }
+}
+
+.promo__caption {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 127px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 117px 58px 290px 58px 1fr;
+    padding-top: 82px;
+  }
+}
+
+.promo__title {
+  @include title;
+
+  font-size: 25px;
+  padding-bottom: 3px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/-1;
+    z-index: 1;
+  }
+}
+
+.promo__subtitle {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $aquamarine;
+  margin: 0;
+  margin-bottom: 17.5px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 17px;
+    margin: 0;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-top: 9px;
+    margin-left: 46px;
+  }
+}
+
+.promo__description {
+  margin: 0;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 48px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+    margin-bottom: 58px;
+  }
+}
+
+.promo__specifications-list {
+  @include list;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+    margin-bottom: 113px;
+  }
+}
+
+.promo__specifications-item {
+  display: grid;
+  grid-template-columns: 97px 1fr;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-line;
+  }
+}
+
+.promo__specifications-title,
+.promo__specifications-description {
+  margin: 0;
+  padding-bottom: 14px;
+}
+
+.promo__picture {
+  @media (min-width: $tablet-width) {
+    grid-column: 3/-1;
+    grid-row: 2/6;
+    align-self: end;
+    position: relative;
+    top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 5/-1;
+    grid-row: 1/6;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+  margin-bottom: 27.5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.promo__price {
+  font-weight: 700;
+  font-size: 17px;
+  color: $grey;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 24.5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    padding-bottom: 32.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+  }
+}
+
+.promo__button {
+  @include button;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+  }
+
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

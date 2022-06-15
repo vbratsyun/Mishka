@@ -1,0 +1,83 @@
+.form__button {
+  @include button;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 32.5%;
+  }
+}
+
+.form__fieldset-color,
+.form__contacts {
+  @media (min-width: $tablet-width) {
+    background-color: $lighter-grey;
+    padding: 66px 0;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    .form__fieldset-color {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+.form__contacts {
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 15px;
+    margin-bottom: 52px;
+  }
+}
+
+.form__note {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 228px 1fr;
+    column-gap: 109px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    column-gap: 36px;
+    align-items: center;
+  }
+}
+
+.form__footnote {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+    text-align: right;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.form__button {
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

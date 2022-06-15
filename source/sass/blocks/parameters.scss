@@ -1,0 +1,25 @@
+.parameters {
+  margin-bottom: 55px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.parameters__description {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 702px;
+    margin: 0 auto;
+    margin-bottom: 79px;
+  }
+}

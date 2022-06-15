@@ -1,0 +1,23 @@
+.br {
+  @media (min-width: $mobile-width-only) {
+    &--mobile {
+      display: block;
+    }
+
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+  }
+}

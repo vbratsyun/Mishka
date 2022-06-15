@@ -1,0 +1,54 @@
+.nav-list {
+  @include list;
+  @include nav-element;
+}
+
+.nav-list-item {
+  &--delivery,
+  &--new,
+  &--sale {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 0 20px;
+
+    &--delivery {
+      display: block;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: $grey;
+      padding-right: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 19px 0 20px;
+    box-sizing: border-box;
+
+    &--new {
+      padding-left: 50px;
+      width: 235px;
+    }
+
+    &--sale {
+      margin-right: auto;
+      width: 50%;
+      padding-left: 35px;
+    }
+
+    &--delivery {
+      text-align: right;
+      padding-right: 50px;
+      width: 309px;
+    }
+  }
+}
+
+.nav-list-item-link {
+  @include link;
+  color: inherit;
+  font-size: 15px;
+}

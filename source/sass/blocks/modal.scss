@@ -1,0 +1,136 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.modal__content {
+  width: 320px;
+  padding: 28.5px 30px 46px;
+  margin: auto;
+  border: 1px solid #c6c6c6;
+  border-left: none;
+  border-right: none;
+  background-color: $white;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: $tablet-width) {
+    width: 566px;
+    border: 1px solid #c6c6c6;
+    padding-top: 37.5px;
+  }
+}
+
+.modal__title {
+  @include title;
+  font-size: 25px;
+  width: 62%;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+    width: 100%;
+    margin-bottom: 11px;
+  }
+}
+
+.modal__text {
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 21.5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    margin-bottom: 19.5px;
+  }
+}
+
+.modal__list {
+  @include list;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    width: 71.1%;
+    margin: auto;
+    margin-bottom: 31px;
+  }
+}
+
+.modal__list-control {
+  cursor: pointer;
+  display: block;
+}
+
+.modal__list-control-mark {
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid rgba(68, 68, 68, 0.1);
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 112px;
+  }
+}
+
+.modal__button {
+  @include link;
+  @include button;
+  min-height: 52px;
+  background-color: $aquamarine;
+  outline: none;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 71.1%;
+    margin: auto;
+  }
+
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.modal__list-control-radio[type="radio"]:checked + .modal__list-control-mark {
+  outline-color: $aquamarine;
+}
+
+.modal__list-control-radio[type="radio"]:hover + .modal__list-control-mark {
+  outline-color: rgba(68, 68, 68, 0.3);
+}
+
+.modal__list-control-radio[type="radio"]:focus + .modal__list-control-mark {
+  outline-color: $focus;
+  color: $focus;
+}
+
+.modal__list-control-radio[type="radio"]:active + .modal__list-control-mark {
+  outline-color: $light-aquamarine;
+}

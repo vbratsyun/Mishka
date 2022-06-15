@@ -1,0 +1,41 @@
+.container {
+  margin-left: 30px;
+  margin-right: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 4.36%;
+    margin-right: 4.36%;
+
+    &--about-us {
+      margin-left: 16.7%;
+      margin-right: 16.7%;
+    }
+
+    &--contacts {
+      grid-column: 3/4;
+      grid-row: 4/5;
+      margin: 0;
+      width: 79%;
+    }
+
+    &--form {
+      margin-left: 112px;
+      margin-right: 226px;
+    }
+
+    &--form-color {
+      margin-left: 112px;
+      margin-right: 172px;
+    }
+
+    &--form-contacts {
+      margin-left: 112px;
+      margin-right: 226px;
+    }
+  }
+}

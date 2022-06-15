@@ -1,0 +1,21 @@
+.page {
+  height: 100%;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  background-color: $white;
+  color: $grey;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+}

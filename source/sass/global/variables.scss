@@ -1,0 +1,69 @@
+$white: #ffffff;
+$black: #000000;
+$grey: #444444;
+$light-grey: #f2f2f2;
+$lighter-grey: #f1f1f1;
+$medium-grey: #e5e5e5;
+$dark-grey: #f9f9f9;
+$light-aquamarine: #62d1ba;
+$aquamarine: #63d1bb;
+$dark-aquamarine: #56c3b2;
+$color-line: #ececec;
+$focus: #ff8104;
+
+// Viewports
+$desktop-width: 1150px;
+$tablet-width: 768px;
+$mobile-width-only: 320px;
+
+@mixin link {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin nav-element {
+  font-weight: 700;
+  font-size: 17px;
+  color: $black;
+}
+
+@mixin title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+@mixin button {
+  width: 100%;
+  outline: 2px solid $grey;
+  border: none;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $grey;
+  background-color: transparent;
+  padding: 14px 0;
+  box-sizing: border-box;
+  display: block;
+}

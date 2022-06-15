@@ -165,13 +165,11 @@
   display: block;
 }
 
-.fieldset__control-radio[type="radio"]:checked
-  + .fieldset__control-mark--radio::before {
+.fieldset__control-radio[type="radio"]:checked + .fieldset__control-mark--radio::before {
   display: block;
 }
 
-.fieldset__control-checkbox[type="checkbox"]:checked
-  + .fieldset__control-mark--checkbox::before {
+.fieldset__control-checkbox[type="checkbox"]:checked + .fieldset__control-mark--checkbox::before {
   display: block;
 }
 
@@ -378,7 +376,7 @@
     width: 32px;
     height: 21px;
     transform: translateY(-69%);
-    background: url(../../img/mail.svg);
+    background: url("../../img/mail.svg");
 
     @media (min-width: $tablet-width) {
       top: 66%;

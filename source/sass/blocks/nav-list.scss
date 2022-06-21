@@ -1,6 +1,24 @@
 .nav-list {
   @include list;
   @include nav-element;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    order: 5;
+    flex-wrap: wrap;
+    width: 36.6%;
+    box-sizing: border-box;
+    background-color: $dark-grey;
+
+    &--catalog {
+      background-color: $lighter-grey;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .nav-list-item {

@@ -3,8 +3,6 @@
   background-size: 100%;
   background-color: #f9f9f9;
   background-position: 0 -18px;
-  margin-bottom: 31px;
-  position: relative;
 
   @media (min-resolution: 2dppx) {
     background: url("../../img/hero-mobile@2x.jpg") no-repeat top center;
@@ -17,7 +15,6 @@
     height: 678px;
     background: url("../../img/hero-tablet.jpg") no-repeat center -67px;
     background-size: cover;
-    margin-bottom: 54px;
 
     &::after {
       content: "";

@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+  outline: 1px solid transparent;
+
+  &:hover .wrapper-icon {
+    fill: $aquamarine;
+    opacity: 1;
+  }
+
+  &:hover .wrapper-title {
+    opacity: 0.6;
+  }
+
+  &:active .wrapper-icon {
+    fill: $aquamarine;
+    opacity: 0.3;
+  }
+
+  &:active .wrapper-title {
+    opacity: 0.3;
+  }
+}
+
+.wrapper-icon {
+  align-self: center;
+  opacity: 0.2;
+
+  &--basket {
+    @media (min-width: $tablet-width) {
+      margin-right: 32px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+  }
+}
+
+.wrapper-title {
+  @include nav-element;
+  font-size: inherit;
+  padding-left: 24px;
+
+  &--basket {
+    padding-left: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+
+    &--basket {
+      @include nav-element;
+      padding-left: 0;
+      display: inline-block;
+    }
+  }
+}

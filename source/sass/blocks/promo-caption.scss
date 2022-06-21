@@ -1,0 +1,15 @@
+.promo-caption {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 127px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 117px 58px 290px 58px 1fr;
+    padding-top: 64px;
+  }
+}

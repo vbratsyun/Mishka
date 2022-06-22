@@ -19,15 +19,15 @@
     padding: 8px 12px;
   }
 
-  &:hover .page-header__logo-image {
+  &:hover .logo-image {
     opacity: 0.6;
   }
 
-  &:focus .page-header__logo-image {
+  &:focus .logo-image {
     outline: 2px solid $focus;
   }
 
-  &:active .page-header__logo-image {
+  &:active .logo-image {
     opacity: 0.3;
   }
 }

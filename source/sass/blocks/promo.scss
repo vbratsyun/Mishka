@@ -26,7 +26,8 @@
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 117px 58px 290px 58px 1fr;
-    padding-top: 82px;
+    padding-top: 64px;
+    margin-bottom: 37px;
   }
 }
 
@@ -57,10 +58,9 @@
   margin-bottom: 17.5px;
 
   @media (min-width: $tablet-width) {
-    line-height: 17px;
-    margin: 0;
     text-align: center;
     padding-top: 4px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -78,62 +78,38 @@
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 48px;
     grid-column: 1/2;
     grid-row: 2/3;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3/4;
-    margin-bottom: 58px;
+    margin-bottom: 57px;
   }
 }
 
 .promo__specifications-list {
   @include list;
+
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 56px;
-    grid-column: 1/2;
-    grid-row: 3/4;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 3/4;
     margin-bottom: 113px;
   }
 }
 
-.promo__specifications-item {
-  display: grid;
-  grid-template-columns: 97px 1fr;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 1px;
-    background-color: $color-line;
-  }
-}
-
-.promo__specifications-title,
-.promo__specifications-description {
-  margin: 0;
-  padding-bottom: 14px;
-}
-
 .promo__picture {
   @media (min-width: $tablet-width) {
+    position: relative;
+    top: 2px;
     grid-column: 3/-1;
     grid-row: 2/6;
     align-self: end;
-    position: relative;
-    top: 2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -184,19 +160,5 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 3/4;
-  }
-
-  &:hover {
-    background-color: $grey;
-    color: $white;
-  }
-
-  &:focus {
-    outline: 2px solid $focus;
-  }
-
-  &:active {
-    background-color: $grey;
-    color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -1,0 +1,41 @@
+.logo {
+  @include link;
+  text-align: center;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    order: 0;
+    min-width: 48.3%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 21px 0 21px 50px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    min-width: 22.9%;
+    padding: 8px 12px;
+  }
+
+  &:hover .logo-image {
+    opacity: 0.6;
+  }
+
+  &:focus .logo-image {
+    outline: 2px solid $focus;
+  }
+
+  &:active .logo-image {
+    opacity: 0.3;
+  }
+}
+
+.logo__image {
+  margin: 22px auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}

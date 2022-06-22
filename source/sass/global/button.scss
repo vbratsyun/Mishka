@@ -1,0 +1,15 @@
+.button {
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

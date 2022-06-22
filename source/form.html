@@ -21,12 +21,12 @@
   <!-- HEADER -->
   <header class="page-header">
     <nav class="page-nav page-nav--closed page-nav--nojs">
-      <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <a class="page-header__logo" href="index.html">
+      <button class="page-nav__toggle nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <a class="logo" href="index.html">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип сайта.">
+          <img class="logo__image logo-image" src="img/logo-mobile.svg" alt="Логотип сайта.">
         </picture>
       </a>
       <div class="page-nav__catalog page-nav__catalog--catalog">
@@ -35,28 +35,26 @@
       <div class="page-nav__order page-nav__order--catalog">
         <a class="page-nav__order-link link" href="form.html">Вязание на заказ</a>
       </div>
-      <ul class="page-nav__list nav-list page-nav__list--catalog">
+      <ul class="nav-list nav-list--catalog">
         <li class="nav-list-item nav-list-item--new"><a class="nav-list-item-link link" href="#">Новые поступления</a> </li>
         <li class="nav-list-item nav-list-item--sale"><a class="nav-list-item-link link" href="#">Распродажа</a> </li>
         <li class="nav-list-item nav-list-item--delivery"><a class="nav-list-item-link link" href="#">Бесплатная доставка по России</a></li>
       </ul>
-      <a class="search" href="#">
-        <div class="search__container">
-          <svg class="search__icon" width="18" height="18">
+      <a class="search link" href="#">
+        <div class="search__wrapper wrapper">
+          <svg class="wrapper-icon" width="18" height="18">
             <use xlink:href="img/sprite.svg#icon-search"></use>
           </svg>
-          <span class="search__title">Поиск по сайту</span>
+          <span class="wrapper-title">Поиск по сайту</span>
         </div>
-
       </a>
-      <a class="basket" href="#">
-        <div class="basket__container">
-          <svg class="basket__icon" width="21" height="18">
+      <a class="basket link" href="#">
+        <div class="basket__wrapper wrapper">
+          <svg class="wrapper-icon wrapper-icon--basket" width="21" height="18">
             <use xlink:href="img/sprite.svg#icon-basket"></use>
           </svg>
-          <span class="basket__title">Корзина: пока пуста</span>
+          <span class="wrapper-title wrapper-title--basket">Корзина: пока пуста</span>
         </div>
-
       </a>
     </nav>
   </header>
@@ -137,7 +135,6 @@
               </li>
             </ul>
           </div>
-
         </div>
         <div class="form__fieldset fieldset fieldset--personality container container--form">
           <p class="fieldset__title fieldset__title--personality">ФИО</p>
@@ -178,12 +175,10 @@
         </div>
         <div class="form__note container container--form">
           <p class="form__footnote">*Поля обязательны для заполнения</p>
-          <button class="form__button" type="submit">Отправить заказ</button>
+          <button class="form__button button" type="submit">Отправить заказ</button>
         </div>
-
       </form>
     </section>
-
   </main>
   <!-- FOOTER  -->
   <footer class="page-footer">
@@ -228,27 +223,37 @@
           </svg>
         </a>
       </div>
-
     </div>
-
   </footer>
-  <script>
-    var navMain = document.querySelector('.page-nav');
-    var navToggle = document.querySelector('.page-nav__toggle');
-
-    navMain.classList.remove('page-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('page-nav--closed')) {
-        navMain.classList.remove('page-nav--closed');
-        navMain.classList.add('page-nav--opened');
-      } else {
-        navMain.classList.add('page-nav--closed');
-        navMain.classList.remove('page-nav--opened');
-      }
-    });
-  </script>
+  <!-- Модальное окно -->
+  <div class="modal modal--warning">
+    <section class="modal__content">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <ul class="modal__list">
+        <li class="modal__list-item">
+          <label class="modal__list-control">
+            <input class="visually-hidden modal__list-control-radio" type="radio" name="size" value="S" checked>
+            <span class="modal__list-control-mark">S</span>
+          </label>
+        </li>
+        <li class="modal__list-item">
+          <label class="modal__list-control">
+            <input class="visually-hidden modal__list-control-radio" type="radio" name="size" value="M">
+            <span class="modal__list-control-mark">M</span>
+          </label>
+        </li>
+        <li class="modal__list-item">
+          <label class="modal__list-control">
+            <input class="visually-hidden modal__list-control-radio" type="radio" name="size" value="L">
+            <span class="modal__list-control-mark">L</span>
+          </label>
+        </li>
+      </ul>
+      <a class="modal__button" href="#">Добавить</a>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
 </body>
-
 
 </html>

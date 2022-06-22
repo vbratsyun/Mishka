@@ -14,25 +14,11 @@
 }
 
 .page-nav__toggle {
-  border: none;
-  background-color: transparent;
-  width: 20px;
-  height: 14px;
   position: absolute;
   right: 23px;
   top: -1px;
-  cursor: pointer;
   padding: 17px;
   margin: 0;
-  outline: 1px solid transparent;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  &:focus {
-    outline: 2px solid $focus;
-  }
 }
 
 .page-nav--closed .page-nav__toggle::before {
@@ -101,8 +87,8 @@
 }
 
 .page-nav__catalog {
-  display: block;
   position: relative;
+  display: block;
 
   &::before {
     content: "";
@@ -194,26 +180,5 @@
 
   @media (min-width: $desktop-width) {
     font-size: 17px;
-  }
-}
-
-.page-nav__list {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    order: 5;
-    flex-wrap: wrap;
-    width: 36.6%;
-    box-sizing: border-box;
-    background-color: $dark-grey;
-
-    &--catalog {
-      background-color: $lighter-grey;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    order: 5;
-    width: 100%;
   }
 }

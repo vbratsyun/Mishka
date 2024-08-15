@@ -14,11 +14,11 @@
     top: 0;
     width: 100%;
     height: 6px;
-    background-image: url("../../img/zigzag-line-desktop.svg");
+    background-image: url("../img/zigzag-line-desktop.svg");
 
     @media (min-width: $tablet-width) {
       height: 17px;
-      background: url("../../img/zigzag-line-desktop.svg") no-repeat;
+      background: url("../img/zigzag-line-desktop.svg") no-repeat;
       background-size: 100%;
     }
 
@@ -70,7 +70,7 @@
       right: 3px;
       width: 47px;
       height: 82px;
-      background: url("../../img/flag.svg") no-repeat;
+      background: url("../img/flag.svg") no-repeat;
     }
   }
 
